@@ -5,7 +5,8 @@ Authors@R: person("Vehbi Sinan", "Tunalioglu", email="vst@vsthost.com", role = c
 Description: sepl provides auxiliary functionality for OpenCPU.
 Depends:
     R (>= 3.2.3),
-    jsonlite
+    jsonlite,
+    rmarkdown
 License: LGPL-3
 LazyData: true
 RoxygenNote: 5.0.1

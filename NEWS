@@ -1,4 +1,11 @@
-VERS: 2016-02-14 ------- release/0.0.1
+VERS: 2016-02-16 ------- release/0.0.2
 
+    * 2016-02-16 6bb2fbc [release] Version bumped to 0.0.2 (vst@vsthost.com)
+    * 2016-02-16 be2c2ef [feature] Added render function which render R markdown files with params (vst@vsthost.com)
+    * 2016-02-14 3ee1101 [chore] Development version bumped to 0.0.1.9000 (vst@vsthost.com)
+
+VERS: 2016-02-14 ed3e59c release/0.0.1 (vst@vsthost.com)
+
+    * 2016-02-14 b9fbe76 [release] NEWS file updated (vst@vsthost.com)
     * 2016-02-14 f828f93 [release] Version bumped to 0.0.1 (vst@vsthost.com)
     * 2016-02-14 fdcf1e6 Initial commit (vst@vsthost.com)

@@ -64,3 +64,23 @@ sepl <- function (input, isfile=FALSE, trace=FALSE) {
         .seplsuccess(retval)
     }
 }
+
+##' Renders the markdown file with the params provided as PARAMS
+##' global.
+##'
+##' @param file The markdown file provided.
+##' @param params Parameters to be injected into PARAMS global.
+##' @param ... Additional arguments to rmarkdown::render
+##' @return rmarkdown::render result.
+##' @import rmarkdown
+##' @export
+render <- function (file, params=list(), ...) {
+    ## Create a new environment:
+    myEnv <- new.env()
+
+    ## Assign the params in the environment:
+    assign("PARAMS", params, envir=myEnv)
+
+    ## Render the document:
+    rmarkdown::render(file, envir=myEnv, ...)
+}

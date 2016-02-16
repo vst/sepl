@@ -1,11 +1,12 @@
 Package: sepl
 Title: Auxiliary Functionality for OpenCPU
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Vehbi Sinan", "Tunalioglu", email="vst@vsthost.com", role = c("aut", "cre"))
 Description: sepl provides auxiliary functionality for OpenCPU.
 Depends:
     R (>= 3.2.3),
-    jsonlite
+    jsonlite,
+    rmarkdown
 License: LGPL-3
 LazyData: true
 RoxygenNote: 5.0.1

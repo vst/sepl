@@ -1,5 +1,12 @@
-VERS: 2016-02-16 ------- release/0.0.2
+VERS: 2016-07-04 ------- release/0.0.3
 
+    * 2016-07-04 59c0ef7 [release] Version bumped to 0.0.3 (vst@vsthost.com)
+    * 2016-07-04 8093d1e [chore] Documentation and import changes, renamed render to renderWithParams (vst@vsthost.com)
+    * 2016-02-16 d6c958b [chore] Development version bumped to 0.0.2.9000 (vst@vsthost.com)
+
+VERS: 2016-02-16 1acbc3b release/0.0.2 (vst@vsthost.com)
+
+    * 2016-02-16 f7b1ed1 [release] Change log updated (vst@vsthost.com)
     * 2016-02-16 6bb2fbc [release] Version bumped to 0.0.2 (vst@vsthost.com)
     * 2016-02-16 be2c2ef [feature] Added render function which render R markdown files with params (vst@vsthost.com)
     * 2016-02-14 3ee1101 [chore] Development version bumped to 0.0.1.9000 (vst@vsthost.com)

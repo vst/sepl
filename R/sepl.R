@@ -1,24 +1,34 @@
+##' Encapsulate Error
+##'
 ##' Wraps an sepl "error" result.
 ##'
 ##' @param msg The error message.
 ##' @param call The call expression which yields the error.
 ##' @param trace Indicates if the traceback should be included in the error result.
 ##' @return A list representing the "success" result.
+##'
+##' @importFrom jsonlite unbox
 .seplerror <- function (msg, call, trace=FALSE) {
-    list(message=jsonlite::unbox(msg),
-         call=jsonlite::unbox(as.character(as.expression(call))),
-         trace=traceback(ifelse(trace, 1, NA)),
-         status=jsonlite::unbox("error"))
+    list(message = unbox(msg),
+         call    = unbox(as.character(as.expression(call))),
+         trace   = traceback(ifelse(trace, 1, NA)),
+         status  = unbox("error"))
 }
 
+##' Encapsulate Success
+##'
 ##' Wraps an sepl "success" result.
 ##'
 ##' @param result The result data.
 ##' @return A list representing the "success" result.
+##'
+##' @importFrom jsonlite unbox
 .seplsuccess <- function (result) {
-    list(result=result, status=jsonlite::unbox("success"))
+    list(result=result, status=unbox("success"))
 }
 
+##' Evaluate Input Safely
+##'
 ##' Evaluates the input under a try-catch statement.
 ##'
 ##' @param input The input to be evaluated.
@@ -39,6 +49,8 @@
     }
 }
 
+##' Evalute Input
+##'
 ##' Evaluates the input and returns a sepl result.
 ##'
 ##' The result can be either a "success" result or an "error"
@@ -50,7 +62,7 @@
 ##' @param trace Indicates if the traceback should be included in the
 ##'     error result, if any.
 ##' @return The sepl result.
-##' @import jsonlite
+##'
 ##' @export
 sepl <- function (input, isfile=FALSE, trace=FALSE) {
     ## Eval/Source the input under try-catch:
@@ -65,6 +77,8 @@ sepl <- function (input, isfile=FALSE, trace=FALSE) {
     }
 }
 
+##' Render Markdown with Parameters
+##'
 ##' Renders the markdown file with the params provided as PARAMS
 ##' global.
 ##'
@@ -72,9 +86,10 @@ sepl <- function (input, isfile=FALSE, trace=FALSE) {
 ##' @param params Parameters to be injected into PARAMS global.
 ##' @param ... Additional arguments to rmarkdown::render
 ##' @return rmarkdown::render result.
+##'
 ##' @import rmarkdown
 ##' @export
-render <- function (file, params=list(), ...) {
+renderWithParams <- function (file, params=list(), ...) {
     ## Create a new environment:
     myEnv <- new.env()
 

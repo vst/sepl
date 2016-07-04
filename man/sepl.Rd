@@ -2,7 +2,7 @@
 % Please edit documentation in R/sepl.R
 \name{sepl}
 \alias{sepl}
-\title{Evaluates the input and returns a sepl result.}
+\title{Evalute Input}
 \usage{
 sepl(input, isfile = FALSE, trace = FALSE)
 }
@@ -18,6 +18,9 @@ error result, if any.}
 The sepl result.
 }
 \description{
+Evaluates the input and returns a sepl result.
+}
+\details{
 The result can be either a "success" result or an "error"
 result. In both cases, the return value indicates what it is and
 provides useful(ish) information in case of "error".
